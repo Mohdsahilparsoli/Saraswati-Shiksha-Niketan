@@ -1,0 +1,126 @@
+---
+import AboutHeroImage from '../assets/blog-placeholder-about.jpg';
+import Layout from '../layouts/BlogPost.astro';
+---
+
+<Layout
+	title="Contact Us | Saraswati Shiksha Niketan Inter College, Ghaziabad"
+	description="Get in touch with Saraswati Shiksha Niketan Inter College, Vijay Nagar, Ghaziabad. Address, phone, email, office timings, and inquiry forms for admissions and general queries."
+	pubDate={new Date('August 08 2021')}
+	heroImage={AboutHeroImage}
+>
+	  <section class="page-header">
+    <div class="container">
+      <div class="breadcrumb"><a href="/">Home</a> / <span>Contact</span></div>
+      <h1>Contact Us</h1>
+      <p>We would love to hear from you. Reach out for admissions, general queries, or to schedule a campus visit.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="grid grid-4">
+        <div class="card reveal text-center">
+          <div class="icon-badge" style="margin-inline:auto;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <h4>Address</h4>
+          <p>Krishna Nagar Bagu, Vijay Nagar, Ghaziabad, Uttar Pradesh &ndash; 201009</p>
+        </div>
+        <div class="card reveal text-center">
+          <div class="icon-badge" style="margin-inline:auto;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+          <h4>Phone</h4>
+          <p><a href="tel:+911204567890">+91 120 456 7890</a><br><a href="tel:+919876543210">+91 98765 43210</a></p>
+        </div>
+        <div class="card reveal text-center">
+          <div class="icon-badge" style="margin-inline:auto;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="m22 6-10 7L2 6"/></svg></div>
+          <h4>Email</h4>
+          <p><a href="mailto:info@saraswatishikshaniketan.edu.in">info@saraswatishikshaniketan.edu.in</a></p>
+        </div>
+        <div class="card reveal text-center">
+          <div class="icon-badge" style="margin-inline:auto;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+          <h4>Office Timings</h4>
+          <p>Monday &ndash; Saturday<br>8:00 AM &ndash; 3:30 PM</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Find Us</span>
+        <h2>Visit Our Campus</h2>
+      </div>
+      <div class="image-frame reveal" style="height:420px;">
+        <iframe title="Saraswati Shiksha Niketan Inter College location map" src="https://www.google.com/maps?q=Vijay+Nagar,+Ghaziabad,+Uttar+Pradesh+201009&output=embed" width="100%" height="100%" style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container split">
+      <div class="reveal">
+        <span class="eyebrow">General Inquiry</span>
+        <h2>Send Us a Message</h2>
+        <p class="lede">For general questions, feedback, or partnership inquiries, use the form below and our team will respond within one working day.</p>
+      </div>
+      <div class="form-card reveal">
+        <div class="form-success" role="status"></div>
+        <form data-validate>
+          <div class="form-row">
+            <div class="field"><label for="c-name">Your Name</label><input type="text" id="c-name" required><span class="error-msg">Please enter your name.</span></div>
+            <div class="field"><label for="c-phone">Phone Number</label><input type="tel" id="c-phone" data-phone required><span class="error-msg">Please enter a valid 10-digit number.</span></div>
+          </div>
+          <div class="field"><label for="c-email">Email Address</label><input type="email" id="c-email" required><span class="error-msg">Please enter a valid email.</span></div>
+          <div class="field"><label for="c-subject">Subject</label><input type="text" id="c-subject" required><span class="error-msg">Please enter a subject.</span></div>
+          <div class="field"><label for="c-msg">Message</label><textarea id="c-msg" rows="4" required></textarea><span class="error-msg">Please enter your message.</span></div>
+          <button class="btn btn-primary btn-block" type="submit">Send Message <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg></button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="container">
+      <div class="section-head center">
+        <span class="eyebrow">Planning to Enroll?</span>
+        <h2>Admission Inquiry Form</h2>
+        <p class="lede" style="margin-inline:auto;">Prefer to start with admissions directly? Fill this short form and our admissions desk will call you back.</p>
+      </div>
+      <div class="form-card reveal" style="max-width:700px;margin-inline:auto;">
+        <div class="form-success" role="status"></div>
+        <form data-validate>
+          <div class="form-row">
+            <div class="field"><label for="ci-name">Parent's Name</label><input type="text" id="ci-name" required><span class="error-msg">Please enter your name.</span></div>
+            <div class="field"><label for="ci-phone">Phone Number</label><input type="tel" id="ci-phone" data-phone required><span class="error-msg">Please enter a valid 10-digit number.</span></div>
+          </div>
+          <div class="field"><label for="ci-class">Class Interested In</label>
+            <select id="ci-class" required>
+              <option value="">Select a class</option>
+              <option>Nursery / LKG / UKG</option>
+              <option>Class 1 - 5</option>
+              <option>Class 6 - 8</option>
+              <option>Class 9 - 10</option>
+              <option>Class 11 - 12</option>
+            </select>
+            <span class="error-msg">Please select a class.</span>
+          </div>
+          <button class="btn btn-dark btn-block" type="submit">Request a Callback <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg></button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head center">
+        <span class="eyebrow">At a Glance</span>
+        <h2>Quick Contact Information</h2>
+      </div>
+      <div class="grid grid-3">
+        <div class="card reveal"><div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><h4>Admissions Desk</h4><p>+91 98765 43210<br>admissions@saraswatishikshaniketan.edu.in</p></div>
+        <div class="card reveal"><div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg></div><h4>Front Office</h4><p>+91 120 456 7890<br>info@saraswatishikshaniketan.edu.in</p></div>
+        <div class="card reveal"><div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6v6"/><path d="M15 6v6"/><path d="M2 12h19.6"/><path d="M18 18h3s.5-1.7.8-2.8c.1-.4.2-.8.2-1.2 0-.4-.1-.8-.2-1.2l-1.4-5C20.1 6.8 19.1 6 18 6H4a2 2 0 0 0-2 2v10h3"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg></div><h4>Transport Desk</h4><p>+91 98765 12340<br>transport@saraswatishikshaniketan.edu.in</p></div>
+      </div>
+    </div>
+  </section>
+</Layout>

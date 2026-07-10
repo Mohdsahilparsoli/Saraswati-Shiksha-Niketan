@@ -1,0 +1,108 @@
+---
+
+import Layout from '../layouts/BlogPost.astro';
+---
+
+<Layout
+	title="Photo Gallery | Saraswati Shiksha Niketan Inter College, Ghaziabad"
+	description="Browse photos from campus life, classrooms, laboratories, sports events, cultural programs, and annual celebrations at Saraswati Shiksha Niketan Inter College."
+	pubDate={new Date('August 08 2021')}
+
+>
+  <section class="page-header">
+    <div class="container">
+      <div class="breadcrumb"><a href="/">Home</a> / <span>Gallery</span></div>
+      <h1>Gallery</h1>
+      <p>A glimpse into everyday life at Saraswati Shiksha Niketan — classrooms, labs, sports, celebrations, and achievements.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="gallery-filters" role="tablist" aria-label="Filter gallery by category">
+        <button class="is-active" data-filter="all">All</button>
+        <button data-filter="campus">Campus</button>
+        <button data-filter="classroom">Classroom</button>
+        <button data-filter="lab">Laboratories</button>
+        <button data-filter="sports">Sports</button>
+        <button data-filter="cultural">Cultural</button>
+        <button data-filter="annual-day">Annual Day</button>
+        <button data-filter="achievement">Achievements</button>
+      </div>
+      <div class="masonry">
+        <figure class="masonry-item" data-category="campus">
+          <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1600&q=80" alt="Main school campus building" loading="lazy">
+          <figcaption>Main school campus building</figcaption>
+        </figure>
+        <figure class="masonry-item" data-category="classroom">
+          <img src="https://images.unsplash.com/photo-1519452575417-564c1401ecc0?auto=format&fit=crop&w=1200&q=80" alt="Students participating in class discussion" loading="lazy">
+          <figcaption>Students participating in class discussion</figcaption>
+        </figure>
+        <figure class="masonry-item" data-category="lab">
+          <img src="https://images.unsplash.com/photo-1554774853-b415df9eeb92?auto=format&fit=crop&w=1200&q=80" alt="Chemistry lab experiment session" loading="lazy">
+          <figcaption>Chemistry lab experiment session</figcaption>
+        </figure>
+        <figure class="masonry-item" data-category="sports">
+          <img src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=1200&q=80" alt="Annual sports meet on the school ground" loading="lazy">
+          <figcaption>Annual sports meet on the school ground</figcaption>
+        </figure>
+        <figure class="masonry-item" data-category="cultural">
+          <img src="https://images.unsplash.com/photo-1547153760-18fc86324498?auto=format&fit=crop&w=1200&q=80" alt="Cultural dance performance rehearsal" loading="lazy">
+          <figcaption>Cultural dance performance rehearsal</figcaption>
+        </figure>
+        <figure class="masonry-item" data-category="annual-day">
+          <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=1200&q=80" alt="Annual Day stage performance" loading="lazy">
+          <figcaption>Annual Day stage performance</figcaption>
+        </figure>
+        <figure class="masonry-item" data-category="classroom">
+          <img src="https://images.unsplash.com/photo-1571260899304-425eee4c7efc?auto=format&fit=crop&w=1200&q=80" alt="Primary class activity session" loading="lazy">
+          <figcaption>Primary class activity session</figcaption>
+        </figure>
+        <figure class="masonry-item" data-category="lab">
+          <img src="https://images.unsplash.com/photo-1544717297-fa95b6ee9643?auto=format&fit=crop&w=1200&q=80" alt="Computer lab practical class" loading="lazy">
+          <figcaption>Computer lab practical class</figcaption>
+        </figure>
+        <figure class="masonry-item" data-category="achievement">
+          <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1200&q=80" alt="Board toppers felicitation ceremony" loading="lazy">
+          <figcaption>Board toppers felicitation ceremony</figcaption>
+        </figure>
+        <figure class="masonry-item" data-category="campus">
+          <img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=1200&q=80" alt="Students reading in the school library" loading="lazy">
+          <figcaption>Students reading in the school library</figcaption>
+        </figure>
+        <figure class="masonry-item" data-category="sports">
+          <img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=1200&q=80" alt="Inter-house football match" loading="lazy">
+          <figcaption>Inter-house football match</figcaption>
+        </figure>
+        <figure class="masonry-item" data-category="cultural">
+          <img src="https://images.unsplash.com/photo-1591123120675-6f7f1aae0e5b?auto=format&fit=crop&w=1200&q=80" alt="Morning assembly cultural presentation" loading="lazy">
+          <figcaption>Morning assembly cultural presentation</figcaption>
+        </figure>
+        <figure class="masonry-item" data-category="classroom">
+          <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1200&q=80" alt="Art and craft classroom activity" loading="lazy">
+          <figcaption>Art and craft classroom activity</figcaption>
+        </figure>
+        <figure class="masonry-item" data-category="achievement">
+          <img src="https://images.unsplash.com/photo-1580894732444-8ecded7900cd?auto=format&fit=crop&w=800&q=80" alt="Principal awarding certificates to students" loading="lazy">
+          <figcaption>Principal awarding certificates to students</figcaption>
+        </figure>
+        <figure class="masonry-item" data-category="annual-day">
+          <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=1200&q=80" alt="Teacher-led classroom celebration" loading="lazy">
+          <figcaption>Teacher-led classroom celebration</figcaption>
+        </figure>
+        <figure class="masonry-item" data-category="campus">
+          <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=1200&q=80" alt="Smart classroom infrastructure" loading="lazy">
+          <figcaption>Smart classroom infrastructure</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <div class="lightbox">
+    <button class="lightbox-close" aria-label="Close gallery viewer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button>
+    <button class="lightbox-prev" aria-label="Previous image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg></button>
+    <img src="" alt="">
+    <button class="lightbox-next" aria-label="Next image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></button>
+    <span class="lightbox-caption"></span>
+  </div>
+</Layout>
