@@ -1,0 +1,202 @@
+---
+import StudentLayout from "../../layouts/StudentLayout.astro";
+---
+
+<StudentLayout title="Fee Payment | Saraswati Shiksha Niketan Inter College">
+
+<main class="portal-main">
+  <div class="container">
+
+    <div class="portal-card">
+      <h1>Fee Payment</h1>
+      <p class="sub">
+        Academic Year 2025-26 &middot;
+        Class 11 - Science
+      </p>
+
+      <div
+        class="portal-grid"
+        style="grid-template-columns: repeat(3, 1fr);"
+      >
+        <div class="portal-stat">
+          <div>
+            <div class="value">₹45,000</div>
+            <div class="label">Total Fee</div>
+          </div>
+        </div>
+
+        <div class="portal-stat">
+          <div>
+            <div class="value">₹30,000</div>
+            <div class="label">Paid</div>
+          </div>
+        </div>
+
+        <div class="portal-stat">
+          <div>
+            <div class="value">₹15,000</div>
+            <div class="label">Balance</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="portal-card">
+
+      <h2>Make a Payment</h2>
+
+      <div class="portal-alert info">
+        Online card/UPI checkout isn't turned on yet.
+        Pay via bank transfer or UPI to the school account below,
+        then submit your reference number here — the office will verify
+        and confirm it.
+
+        <br />
+
+        <strong>A/c Name:</strong>
+        Saraswati Shiksha Niketan Inter College
+
+        &nbsp;
+
+        <strong>UPI:</strong>
+        school@upi
+
+        &nbsp;
+
+        <em>(update with your real details)</em>
+      </div>
+
+      <form method="post" action="#" novalidate>
+
+        <input
+          type="hidden"
+          name="record_payment"
+          value="1"
+        />
+
+        <div class="portal-row">
+
+          <div class="portal-field">
+            <label for="amount">
+              Amount Paid (₹)
+            </label>
+
+            <input
+              type="number"
+              id="amount"
+              name="amount"
+              min="1"
+              max="15000"
+              step="0.01"
+              value="15000"
+              required
+            />
+          </div>
+
+          <div class="portal-field">
+            <label for="payment_mode">
+              Payment Mode
+            </label>
+
+            <select
+              id="payment_mode"
+              name="payment_mode"
+              required
+            >
+              <option value="">Select</option>
+              <option value="upi">UPI</option>
+              <option value="bank_transfer">
+                Bank Transfer / NEFT
+              </option>
+              <option value="cash_at_office">
+                Paid Cash at Office
+              </option>
+            </select>
+
+          </div>
+
+        </div>
+
+        <div class="portal-field">
+
+          <label for="transaction_ref">
+            Transaction Reference / UTR Number
+          </label>
+
+          <input
+            type="text"
+            id="transaction_ref"
+            name="transaction_ref"
+            placeholder="Leave blank if paid by cash"
+          />
+
+        </div>
+
+        <button
+          class="btn btn-primary btn-block"
+          type="submit"
+        >
+          Submit Payment for Verification
+        </button>
+
+      </form>
+
+    </div>
+
+    <div class="portal-card">
+
+      <h2>Payment History</h2>
+
+      <table class="portal-table">
+
+        <thead>
+
+          <tr>
+            <th>Date</th>
+            <th>Year</th>
+            <th>Amount</th>
+            <th>Mode</th>
+            <th>Reference</th>
+            <th>Status</th>
+          </tr>
+
+        </thead>
+
+        <tbody>
+
+          <tr>
+            <td>10 Jun 2025</td>
+            <td>2025-26</td>
+            <td>₹20,000</td>
+            <td>Bank Transfer</td>
+            <td>UTR228841190</td>
+            <td>
+              <span class="badge confirmed">
+                Confirmed
+              </span>
+            </td>
+          </tr>
+
+          <tr>
+            <td>02 Sep 2025</td>
+            <td>2025-26</td>
+            <td>₹10,000</td>
+            <td>UPI</td>
+            <td>UPI2509876543</td>
+            <td>
+              <span class="badge confirmed">
+                Confirmed
+              </span>
+            </td>
+          </tr>
+
+        </tbody>
+
+      </table>
+
+    </div>
+
+  </div>
+</main>
+
+</StudentLayout>

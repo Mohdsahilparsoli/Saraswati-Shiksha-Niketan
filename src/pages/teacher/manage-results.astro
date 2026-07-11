@@ -1,0 +1,284 @@
+---
+import TeacherLayout from "../../layouts/TeacherLayout.astro";
+---
+
+<TeacherLayout
+  title="Manage Results | Saraswati Shiksha Niketan Inter College"
+  currentPage="results"
+  teacherName="Mrs. Meera Nair"
+>
+
+<main class="portal-main">
+
+  <div class="container">
+
+    <div class="portal-card">
+
+      <h1>Manage Student Results</h1>
+
+      <p class="sub">
+        Select a student and enter marks for each subject.
+        Changes are saved once you submit the form.
+      </p>
+
+    </div>
+
+    <div class="portal-card">
+
+      <h2>Update Result</h2>
+
+      <form method="post" action="#" novalidate>
+
+        <div class="portal-row">
+
+          <div class="portal-field">
+
+            <label for="student_select">
+              Student
+            </label>
+
+            <select
+              id="student_select"
+              name="student_id"
+              required
+            >
+              <option value="">Select a student</option>
+
+              <option
+                value="SSN-2024-0142"
+                selected
+              >
+                SSN-2024-0142 — Ananya Sharma
+              </option>
+
+              <option value="SSN-2024-0158">
+                SSN-2024-0158 — Rohit Verma
+              </option>
+
+              <option value="SSN-2024-0171">
+                SSN-2024-0171 — Simran Kaur
+              </option>
+
+            </select>
+
+          </div>
+
+          <div class="portal-field">
+
+            <label for="exam_term">
+              Exam / Term
+            </label>
+
+            <select
+              id="exam_term"
+              name="exam_term"
+              required
+            >
+
+              <option value="">
+                Select Term
+              </option>
+
+              <option value="half_yearly">
+                Half-Yearly Exam
+              </option>
+
+              <option
+                value="annual"
+                selected
+              >
+                Annual Exam
+              </option>
+
+            </select>
+
+          </div>
+
+        </div>
+
+        <div class="portal-row">
+
+          <div class="portal-field">
+
+            <label for="marks_physics">
+              Physics (Out of 100)
+            </label>
+
+            <input
+              type="number"
+              id="marks_physics"
+              name="marks_physics"
+              min="0"
+              max="100"
+              value="88"
+            />
+
+          </div>
+
+          <div class="portal-field">
+
+            <label for="marks_chemistry">
+              Chemistry (Out of 100)
+            </label>
+
+            <input
+              type="number"
+              id="marks_chemistry"
+              name="marks_chemistry"
+              min="0"
+              max="100"
+              value="91"
+            />
+
+          </div>
+
+        </div>
+
+        <div class="portal-row">
+
+          <div class="portal-field">
+
+            <label for="marks_maths">
+              Mathematics (Out of 100)
+            </label>
+
+            <input
+              type="number"
+              id="marks_maths"
+              name="marks_maths"
+              min="0"
+              max="100"
+              value="95"
+            />
+
+          </div>
+
+          <div class="portal-field">
+
+            <label for="marks_english">
+              English (Out of 100)
+            </label>
+
+            <input
+              type="number"
+              id="marks_english"
+              name="marks_english"
+              min="0"
+              max="100"
+              value="84"
+            />
+
+          </div>
+
+        </div>
+
+        <div class="portal-field">
+
+          <label for="remarks">
+            Teacher's Remarks
+          </label>
+
+          <textarea
+            id="remarks"
+            name="remarks"
+            rows="3"
+          >
+Consistent performer, shows strong grasp of core concepts.
+          </textarea>
+
+        </div>
+
+        <button
+          class="btn btn-primary btn-block"
+          type="submit"
+        >
+          Save Result
+        </button>
+
+      </form>
+
+    </div>
+
+    <div class="portal-card">
+
+      <h2>Recently Updated Results</h2>
+
+      <table class="portal-table">
+
+        <thead>
+
+          <tr>
+            <th>Admission No</th>
+            <th>Student</th>
+            <th>Term</th>
+            <th>Total</th>
+            <th>Status</th>
+            <th>Last Updated</th>
+          </tr>
+
+        </thead>
+
+        <tbody>
+
+          <tr>
+
+            <td>SSN-2024-0142</td>
+            <td>Ananya Sharma</td>
+            <td>Annual Exam</td>
+            <td>358 / 400</td>
+
+            <td>
+              <span class="badge confirmed">
+                Published
+              </span>
+            </td>
+
+            <td>08 Jul 2026</td>
+
+          </tr>
+
+          <tr>
+
+            <td>SSN-2024-0171</td>
+            <td>Simran Kaur</td>
+            <td>Annual Exam</td>
+            <td>341 / 400</td>
+
+            <td>
+              <span class="badge confirmed">
+                Published
+              </span>
+            </td>
+
+            <td>05 Jul 2026</td>
+
+          </tr>
+
+          <tr>
+
+            <td>SSN-2024-0158</td>
+            <td>Rohit Verma</td>
+            <td>Annual Exam</td>
+            <td>&mdash;</td>
+
+            <td>
+              <span class="badge pending">
+                Pending
+              </span>
+            </td>
+
+            <td>&mdash;</td>
+
+          </tr>
+
+        </tbody>
+
+      </table>
+
+    </div>
+
+  </div>
+
+</main>
+
+</TeacherLayout>

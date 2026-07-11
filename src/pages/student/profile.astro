@@ -1,0 +1,168 @@
+---
+import StudentLayout from "../../layouts/StudentLayout.astro";
+---
+
+<StudentLayout title="My Profile | Saraswati Shiksha Niketan Inter College">
+
+<main class="portal-main">
+  <div class="container">
+
+    <div class="portal-narrow">
+
+      <div class="portal-card">
+
+        <h1>My Profile</h1>
+
+        <p class="sub">
+          Admission number, class, and email are managed by the school office and can't be changed here.
+        </p>
+
+        <form method="post" action="#" novalidate>
+
+          <div class="portal-row">
+
+            <div class="portal-field">
+              <label>Admission Number</label>
+              <input type="text" value="SSN-2024-0142" disabled />
+            </div>
+
+            <div class="portal-field">
+              <label>Class</label>
+              <input type="text" value="Class 11 - Science" disabled />
+            </div>
+
+          </div>
+
+          <div class="portal-field">
+            <label>Email</label>
+            <input
+              type="email"
+              value="ananya.sharma@example.com"
+              disabled
+            />
+          </div>
+
+          <div class="portal-row">
+
+            <div class="portal-field">
+              <label for="full_name">Full Name</label>
+              <input
+                type="text"
+                id="full_name"
+                name="full_name"
+                value="Ananya Sharma"
+                required
+              />
+            </div>
+
+            <div class="portal-field">
+              <label for="phone">Phone Number</label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                value="9876543210"
+                pattern="[0-9]{10}"
+                required
+              />
+            </div>
+
+          </div>
+
+          <div class="portal-field">
+            <label for="address">Address</label>
+
+            <textarea
+              id="address"
+              name="address"
+              rows="3"
+            >45, Nehru Nagar, Ghaziabad, Uttar Pradesh</textarea>
+
+          </div>
+
+          <div class="portal-row">
+
+            <div class="portal-field">
+              <label for="parent_name">
+                Parent / Guardian Name
+              </label>
+
+              <input
+                type="text"
+                id="parent_name"
+                name="parent_name"
+                value="Rajesh Sharma"
+              />
+            </div>
+
+            <div class="portal-field">
+              <label for="parent_phone">
+                Parent / Guardian Phone
+              </label>
+
+              <input
+                type="tel"
+                id="parent_phone"
+                name="parent_phone"
+                value="9876500011"
+              />
+            </div>
+
+          </div>
+
+          <h2 style="margin-top:1.5rem;">
+            Change Password
+
+            <span
+              style="font-weight:400;font-size:.85rem;color:var(--color-text-muted);"
+            >
+              (optional)
+            </span>
+          </h2>
+
+          <div class="portal-row">
+
+            <div class="portal-field">
+              <label for="current_password">
+                Current Password
+              </label>
+
+              <input
+                type="password"
+                id="current_password"
+                name="current_password"
+              />
+            </div>
+
+            <div class="portal-field">
+              <label for="new_password">
+                New Password
+              </label>
+
+              <input
+                type="password"
+                id="new_password"
+                name="new_password"
+                minlength="8"
+              />
+            </div>
+
+          </div>
+
+          <button
+            type="submit"
+            class="btn btn-primary btn-block"
+          >
+            Save Changes
+          </button>
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </div>
+</main>
+
+</StudentLayout>

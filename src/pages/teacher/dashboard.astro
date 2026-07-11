@@ -1,0 +1,259 @@
+---
+import TeacherLayout from "../../layouts/TeacherLayout.astro";
+---
+
+<TeacherLayout
+  title="Teacher Dashboard | Saraswati Shiksha Niketan Inter College"
+  currentPage="dashboard"
+  teacherName="Mrs. Meera Nair"
+>
+
+<main class="portal-main">
+
+  <div class="container">
+
+    <div class="portal-card">
+
+      <h1>Welcome back, Mrs. Meera Nair</h1>
+
+      <p class="sub">
+        Employee ID FAC-0231 &middot;
+        Physics &middot;
+        Class Teacher, Class 11 - Science &middot;
+        2025-26
+      </p>
+
+    </div>
+
+    <div class="portal-grid">
+
+      <div class="portal-card portal-stat">
+
+        <div class="icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+            <circle cx="9" cy="7" r="4"/>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+          </svg>
+        </div>
+
+        <div>
+          <div class="value">32</div>
+          <div class="label">
+            Students in Class 11 - Science
+          </div>
+        </div>
+
+      </div>
+
+      <div class="portal-card portal-stat">
+
+        <div class="icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+            <polyline points="14 2 14 8 20 8"/>
+          </svg>
+        </div>
+
+        <div>
+          <div class="value">4</div>
+          <div class="label">
+            Results Pending Entry
+          </div>
+        </div>
+
+      </div>
+
+      <div class="portal-card portal-stat">
+
+        <div class="icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="4" width="20" height="16" rx="2"/>
+            <circle cx="9" cy="12" r="2"/>
+            <path d="M15 10h4M15 14h4"/>
+          </svg>
+        </div>
+
+        <div>
+          <div class="value">2</div>
+          <div class="label">
+            ID Cards Awaiting Update
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="portal-card">
+
+      <h2>Quick Actions</h2>
+
+      <div class="portal-actions">
+
+        <a
+          href="/teacher/manage-results"
+          class="btn btn-primary btn-sm"
+        >
+          Update a Result
+        </a>
+
+        <a
+          href="/teacher/id-card"
+          class="btn btn-outline btn-sm"
+        >
+          Update an ID Card
+        </a>
+
+      </div>
+
+    </div>
+
+    <div class="portal-card">
+
+      <h2>
+        Student Directory — Class 11 - Science
+      </h2>
+
+      <table class="portal-table">
+
+        <thead>
+
+          <tr>
+            <th>Admission No</th>
+            <th>Name</th>
+            <th>Roll No</th>
+            <th>Result</th>
+            <th>ID Card</th>
+            <th>Action</th>
+          </tr>
+
+        </thead>
+
+        <tbody>
+
+          <tr>
+
+            <td>SSN-2024-0142</td>
+            <td>Ananya Sharma</td>
+            <td>11</td>
+
+            <td>
+              <span class="badge confirmed">
+                Published
+              </span>
+            </td>
+
+            <td>
+              <span class="badge confirmed">
+                Up to date
+              </span>
+            </td>
+
+            <td>
+
+              <a
+                href="/teacher/manage-results"
+                class="btn btn-outline btn-sm"
+              >
+                Edit Result
+              </a>
+
+              <a
+                href="/teacher/id-card"
+                class="btn btn-outline btn-sm"
+              >
+                Edit ID Card
+              </a>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td>SSN-2024-0158</td>
+            <td>Rohit Verma</td>
+            <td>12</td>
+
+            <td>
+              <span class="badge pending">
+                Pending
+              </span>
+            </td>
+
+            <td>
+              <span class="badge confirmed">
+                Up to date
+              </span>
+            </td>
+
+            <td>
+
+              <a
+                href="/teacher/manage-results"
+                class="btn btn-outline btn-sm"
+              >
+                Edit Result
+              </a>
+
+              <a
+                href="/teacher/id-card"
+                class="btn btn-outline btn-sm"
+              >
+                Edit ID Card
+              </a>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td>SSN-2024-0171</td>
+            <td>Simran Kaur</td>
+            <td>13</td>
+
+            <td>
+              <span class="badge confirmed">
+                Published
+              </span>
+            </td>
+
+            <td>
+              <span class="badge pending">
+                Needs Update
+              </span>
+            </td>
+
+            <td>
+
+              <a
+                href="/teacher/manage-results"
+                class="btn btn-outline btn-sm"
+              >
+                Edit Result
+              </a>
+
+              <a
+                href="/teacher/id-card"
+                class="btn btn-outline btn-sm"
+              >
+                Edit ID Card
+              </a>
+
+            </td>
+
+          </tr>
+
+        </tbody>
+
+      </table>
+
+    </div>
+
+  </div>
+
+</main>
+
+</TeacherLayout>

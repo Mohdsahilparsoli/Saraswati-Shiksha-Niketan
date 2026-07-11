@@ -1,0 +1,68 @@
+---
+import StudentLayout from "../../layouts/StudentLayout.astro";
+---
+
+<StudentLayout title="Class Promotion | Saraswati Shiksha Niketan Inter College">
+
+<main class="portal-main">
+  <div class="container">
+
+    <div class="portal-card">
+
+      <h1>Class Promotion / Re-registration</h1>
+
+      <p class="sub">
+        Request to move from Class 11 - Science to the next class for the
+        upcoming academic year. Your office reviews and confirms every request
+        before it takes effect.
+      </p>
+
+      <div class="portal-alert warn">
+        You have a pending request to move to Class 12 - Science.
+        Please wait for office confirmation.
+      </div>
+
+    </div>
+
+    <div class="portal-card">
+
+      <h2>Request History</h2>
+
+      <table class="portal-table">
+
+        <thead>
+          <tr>
+            <th>Requested On</th>
+            <th>To Class</th>
+            <th>Year</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>28 Feb 2026</td>
+            <td>Class 12 - Science</td>
+            <td>2025-26</td>
+            <td>
+              <span class="badge pending">
+                Pending
+              </span>
+            </td>
+          </tr>
+        </tbody>
+
+      </table>
+
+    </div>
+
+    <!--
+      TODO (Backend):
+      Re-enable the "Request Promotion" form
+      once fee dues are cleared and backend API is connected.
+    -->
+
+  </div>
+</main>
+
+</StudentLayout>

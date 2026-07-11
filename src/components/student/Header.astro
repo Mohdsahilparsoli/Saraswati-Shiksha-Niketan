@@ -1,0 +1,53 @@
+---
+const { currentPage = "", showRegister = true } = Astro.props;
+---
+
+<header class="site-header">
+  <div class="container navbar">
+    <a href="/" class="brand">
+      <svg
+        class="brand-mark"
+        viewBox="0 0 64 64"
+        xmlns="http://www.w3.org/2000/svg"
+        role="img"
+        aria-label="Saraswati Shiksha Niketan Inter College crest"
+      >
+        <path
+          d="M32 3 8 12v16c0 16 10.5 26.5 24 33 13.5-6.5 24-17 24-33V12L32 3Z"
+          fill="#1E3A8A"></path>
+        <path d="M32 3 8 12v16c0 16 10.5 26.5 24 33V3Z" fill="#142a63"></path>
+        <path d="M20 28c8-3 16-3 24 0v3c-8-3-16-3-24 0Z" fill="#F8FAFC"></path>
+        <path
+          d="M32 15c-1.8 2.6-3.4 3.6-3.4 6.4a3.4 3.4 0 0 0 6.8 0c0-2.8-1.6-3.8-3.4-6.4Z"
+          fill="#C89B3C"></path>
+        <path d="M22 34c3.5-1.4 6.7-2 10-2v9c-3.3 0-6.5.6-10 2Z" fill="#06B6D4"
+        ></path>
+        <path d="M42 34c-3.5-1.4-6.7-2-10-2v9c3.3 0 6.5.6 10 2Z" fill="#0891B2"
+        ></path>
+      </svg>
+
+      <span class="brand-text">
+        <span class="name">Saraswati Shiksha Niketan</span>
+        <span class="tag">Student Portal</span>
+      </span>
+    </a>
+
+    <nav class="nav-menu" aria-label="Portal">
+      <div class="nav-links">
+        <a href="/" class={currentPage === "home" ? "active" : ""}>
+          School Website
+        </a>
+      </div>
+
+      {
+        showRegister && (
+          <div class="nav-cta">
+            <a href="/student/register" class="btn btn-dark btn-sm">
+              Register
+            </a>
+          </div>
+        )
+      }
+    </nav>
+  </div>
+</header>

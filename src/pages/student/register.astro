@@ -1,0 +1,207 @@
+---
+import StudentLayout from "../../layouts/StudentLayout.astro";
+---
+
+<StudentLayout title="Register | Saraswati Shiksha Niketan Inter College">
+
+<main class="portal-main">
+  <div class="container">
+
+    <div class="portal-narrow">
+
+      <div class="portal-card">
+
+        <h1>Create Your Student Account</h1>
+
+        <p class="sub">
+          Use the admission number given by the school office to register.
+        </p>
+
+        <form method="post" action="#" novalidate>
+
+          <div class="portal-row">
+
+            <div class="portal-field">
+              <label for="admission_no">Admission Number</label>
+              <input
+                type="text"
+                id="admission_no"
+                name="admission_no"
+                required
+              />
+            </div>
+
+            <div class="portal-field">
+              <label for="full_name">Full Name</label>
+              <input
+                type="text"
+                id="full_name"
+                name="full_name"
+                required
+              />
+            </div>
+
+          </div>
+
+          <div class="portal-row">
+
+            <div class="portal-field">
+              <label for="email">Email Address</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+              />
+            </div>
+
+            <div class="portal-field">
+              <label for="phone">Phone Number</label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                pattern="[0-9]{10}"
+                required
+              />
+            </div>
+
+          </div>
+
+          <div class="portal-row">
+
+            <div class="portal-field">
+              <label for="dob">Date of Birth</label>
+              <input
+                type="date"
+                id="dob"
+                name="dob"
+                required
+              />
+            </div>
+
+            <div class="portal-field">
+              <label for="gender">Gender</label>
+
+              <select
+                id="gender"
+                name="gender"
+                required
+              >
+                <option value="">Select</option>
+                <option>Male</option>
+                <option>Female</option>
+                <option>Other</option>
+              </select>
+
+            </div>
+
+          </div>
+
+          <div class="portal-field">
+
+            <label for="class_id">
+              Current Class
+            </label>
+
+            <select
+              id="class_id"
+              name="class_id"
+              required
+            >
+              <option value="">Select your class</option>
+              <option value="1">Class 9</option>
+              <option value="2">Class 10</option>
+              <option value="3">Class 11 - Science</option>
+              <option value="4">Class 11 - Commerce</option>
+              <option value="5">Class 12 - Science</option>
+              <option value="6">Class 12 - Commerce</option>
+            </select>
+
+          </div>
+
+          <div class="portal-row">
+
+            <div class="portal-field">
+              <label for="parent_name">
+                Parent / Guardian Name
+              </label>
+
+              <input
+                type="text"
+                id="parent_name"
+                name="parent_name"
+              />
+            </div>
+
+            <div class="portal-field">
+              <label for="parent_phone">
+                Parent / Guardian Phone
+              </label>
+
+              <input
+                type="tel"
+                id="parent_phone"
+                name="parent_phone"
+              />
+            </div>
+
+          </div>
+
+          <div class="portal-row">
+
+            <div class="portal-field">
+              <label for="password">
+                Password
+              </label>
+
+              <input
+                type="password"
+                id="password"
+                name="password"
+                minlength="8"
+                required
+              />
+            </div>
+
+            <div class="portal-field">
+              <label for="confirm_password">
+                Confirm Password
+              </label>
+
+              <input
+                type="password"
+                id="confirm_password"
+                name="confirm_password"
+                minlength="8"
+                required
+              />
+            </div>
+
+          </div>
+
+          <button
+            class="btn btn-primary btn-block"
+            type="submit"
+          >
+            Register
+          </button>
+
+        </form>
+
+        <div class="portal-link-row">
+          Already have an account?
+
+          <a href="/student/login">
+            Log in
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</main>
+
+</StudentLayout>

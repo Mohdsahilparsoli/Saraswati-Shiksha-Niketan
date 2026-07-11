@@ -1,0 +1,373 @@
+---
+import TeacherLayout from "../../layouts/TeacherLayout.astro";
+---
+
+<TeacherLayout
+  title="Teacher Dashboard | Saraswati Shiksha Niketan Inter College"
+  currentPage="dashboard"
+  teacherName="Mrs. Meera Nair"
+>
+  <main class="portal-main">
+    <div class="container">
+      <style>
+        .idcard-layout {
+          display: grid;
+          grid-template-columns: 1.3fr 1fr;
+          gap: var(--space-lg);
+          align-items: start;
+        }
+        @media (max-width: 900px) {
+          .idcard-layout {
+            grid-template-columns: 1fr;
+          }
+        }
+
+        .idcard-preview-wrap {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: var(--space-sm);
+          position: sticky;
+          top: var(--space-lg);
+        }
+        .idcard {
+          width: 320px;
+          border-radius: var(--radius-md);
+          overflow: hidden;
+          background: var(--color-white);
+          box-shadow: var(--shadow-lg);
+          border: 1px solid var(--color-border);
+          font-family: var(--font-body);
+        }
+        .idcard-head {
+          background: linear-gradient(
+            135deg,
+            var(--color-primary),
+            var(--color-primary-dark)
+          );
+          color: #fff;
+          padding: 0.9rem 1rem;
+          display: flex;
+          align-items: center;
+          gap: 0.6rem;
+        }
+        .idcard-head svg {
+          width: 30px;
+          height: 30px;
+          flex-shrink: 0;
+        }
+        .idcard-head .school-name {
+          font-family: var(--font-display);
+          font-weight: 700;
+          font-size: 0.85rem;
+          line-height: 1.15;
+        }
+        .idcard-head .school-tag {
+          font-size: 0.65rem;
+          opacity: 0.85;
+          letter-spacing: 0.04em;
+          text-transform: uppercase;
+        }
+        .idcard-body {
+          padding: 1rem;
+          display: flex;
+          gap: 0.9rem;
+        }
+        .idcard-photo {
+          width: 84px;
+          height: 100px;
+          border-radius: var(--radius-sm);
+          background: var(--color-bg-secondary);
+          border: 1px solid var(--color-border);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: var(--color-text-soft);
+          flex-shrink: 0;
+          overflow: hidden;
+        }
+        .idcard-photo svg {
+          width: 40px;
+          height: 40px;
+        }
+        .idcard-details {
+          font-size: 0.8rem;
+          color: var(--color-text);
+          flex: 1;
+        }
+        .idcard-details .id-name {
+          font-family: var(--font-display);
+          font-weight: 700;
+          font-size: 1.05rem;
+          color: var(--color-primary);
+          margin-bottom: 0.15rem;
+        }
+        .idcard-details .id-row {
+          display: flex;
+          justify-content: space-between;
+          padding: 0.15rem 0;
+          border-bottom: 1px dashed var(--color-border);
+        }
+        .idcard-details .id-row span:first-child {
+          color: var(--color-text-muted);
+        }
+        .idcard-foot {
+          background: var(--color-bg-secondary);
+          padding: 0.6rem 1rem;
+          font-size: 0.68rem;
+          color: var(--color-text-muted);
+          text-align: center;
+          border-top: 1px solid var(--color-border);
+        }
+      </style>
+
+      <div class="portal-card">
+        <h1>Manage Student ID Cards</h1>
+        <p class="sub">
+          Select a student, update their details, and the ID card preview
+          updates instantly. Print or export once your backend is connected.
+        </p>
+      </div>
+
+      <div class="portal-card">
+        <div class="idcard-layout">
+          <div>
+            <h2>ID Card Details</h2>
+            <!-- TODO (backend): wire this form up to your ID-card update / print script -->
+            <form method="post" action="#" novalidate id="idcard-form">
+              <div class="portal-field">
+                <label for="ic_student_select">Student</label>
+                <select id="ic_student_select" name="student_id">
+                  <option value="SSN-2024-0142" selected
+                    >SSN-2024-0142 &mdash; Ananya Sharma</option
+                  >
+                  <option value="SSN-2024-0158"
+                    >SSN-2024-0158 &mdash; Rohit Verma</option
+                  >
+                  <option value="SSN-2024-0171"
+                    >SSN-2024-0171 &mdash; Simran Kaur</option
+                  >
+                </select>
+              </div>
+              <div class="portal-row">
+                <div class="portal-field">
+                  <label for="ic_name">Full Name</label>
+                  <input
+                    type="text"
+                    id="ic_name"
+                    name="full_name"
+                    value="Ananya Sharma"
+                  />
+                </div>
+                <div class="portal-field">
+                  <label for="ic_admission">Admission Number</label>
+                  <input
+                    type="text"
+                    id="ic_admission"
+                    name="admission_no"
+                    value="SSN-2024-0142"
+                  />
+                </div>
+              </div>
+              <div class="portal-row">
+                <div class="portal-field">
+                  <label for="ic_class">Class &amp; Section</label>
+                  <input
+                    type="text"
+                    id="ic_class"
+                    name="class_section"
+                    value="Class 11 - Science"
+                  />
+                </div>
+                <div class="portal-field">
+                  <label for="ic_blood">Blood Group</label>
+                  <select id="ic_blood" name="blood_group">
+                    <option>A+</option><option>A-</option><option>B+</option
+                    ><option>B-</option>
+                    <option selected>O+</option><option>O-</option><option
+                      >AB+</option
+                    ><option>AB-</option>
+                  </select>
+                </div>
+              </div>
+              <div class="portal-row">
+                <div class="portal-field">
+                  <label for="ic_dob">Date of Birth</label>
+                  <input
+                    type="date"
+                    id="ic_dob"
+                    name="dob"
+                    value="2009-05-14"
+                  />
+                </div>
+                <div class="portal-field">
+                  <label for="ic_valid">Valid Until</label>
+                  <input
+                    type="date"
+                    id="ic_valid"
+                    name="valid_until"
+                    value="2027-03-31"
+                  />
+                </div>
+              </div>
+              <div class="portal-field">
+                <label for="ic_photo">Student Photo</label>
+                <input
+                  type="file"
+                  id="ic_photo"
+                  name="photo"
+                  accept="image/*"
+                />
+              </div>
+
+              <button class="btn btn-primary btn-block" type="submit"
+                >Save ID Card</button
+              >
+            </form>
+          </div>
+
+          <div class="idcard-preview-wrap">
+            <div class="idcard" id="idcard-preview">
+              <div class="idcard-head">
+                <svg
+                  viewBox="0 0 64 64"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M32 3 8 12v16c0 16 10.5 26.5 24 33 13.5-6.5 24-17 24-33V12L32 3Z"
+                    fill="#fff"></path>
+                  <path d="M32 3 8 12v16c0 16 10.5 26.5 24 33V3Z" fill="#dbe4ff"
+                  ></path>
+                </svg>
+                <div>
+                  <div class="school-name">Saraswati Shiksha Niketan</div>
+                  <div class="school-tag">Student ID Card</div>
+                </div>
+              </div>
+              <div class="idcard-body">
+                <div class="idcard-photo" id="preview-photo">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    ><circle cx="12" cy="8" r="4"></circle><path
+                      d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"></path></svg
+                  >
+                </div>
+                <div class="idcard-details">
+                  <div class="id-name" id="preview-name">Ananya Sharma</div>
+                  <div class="id-row">
+                    <span>Admission No.</span><span id="preview-admission"
+                      >SSN-2024-0142</span>
+                  </div>
+                  <div class="id-row">
+                    <span>Class</span><span id="preview-class"
+                      >Class 11 - Science</span>
+                  </div>
+                  <div class="id-row">
+                    <span>Blood Group</span><span id="preview-blood">O+</span>
+                  </div>
+                  <div class="id-row">
+                    <span>DOB</span><span id="preview-dob">14 May 2009</span>
+                  </div>
+                  <div class="id-row" style="border-bottom:none;">
+                    <span>Valid Until</span><span id="preview-valid"
+                      >31 Mar 2027</span>
+                  </div>
+                </div>
+              </div>
+              <div class="idcard-foot">
+                If found, please return to the school office &middot; Ghaziabad,
+                UP
+              </div>
+            </div>
+            <button
+              type="button"
+              class="btn btn-outline btn-sm"
+              onclick="window.print()">Print ID Card</button
+            >
+          </div>
+        </div>
+      </div>
+
+      <script is:inline>
+        // Frontend-only live preview. Replace with real save logic when the backend is connected.
+        function formatDate(value) {
+          if (!value) return "\u2014";
+          var d = new Date(value + "T00:00:00");
+          if (isNaN(d)) return value;
+          return d.toLocaleDateString("en-GB", {
+            day: "2-digit",
+            month: "short",
+            year: "numeric",
+          });
+        }
+        function bindPreview() {
+          document
+            .getElementById("ic_name")
+            .addEventListener("input", function (e) {
+              document.getElementById("preview-name").textContent =
+                e.target.value || "\u2014";
+            });
+          document
+            .getElementById("ic_admission")
+            .addEventListener("input", function (e) {
+              document.getElementById("preview-admission").textContent =
+                e.target.value || "\u2014";
+            });
+          document
+            .getElementById("ic_class")
+            .addEventListener("input", function (e) {
+              document.getElementById("preview-class").textContent =
+                e.target.value || "\u2014";
+            });
+          document
+            .getElementById("ic_blood")
+            .addEventListener("change", function (e) {
+              document.getElementById("preview-blood").textContent =
+                e.target.value || "\u2014";
+            });
+          document
+            .getElementById("ic_dob")
+            .addEventListener("change", function (e) {
+              document.getElementById("preview-dob").textContent = formatDate(
+                e.target.value,
+              );
+            });
+          document
+            .getElementById("ic_valid")
+            .addEventListener("change", function (e) {
+              document.getElementById("preview-valid").textContent = formatDate(
+                e.target.value,
+              );
+            });
+          document
+            .getElementById("ic_photo")
+            .addEventListener("change", function (e) {
+              var file = e.target.files && e.target.files[0];
+              if (!file) return;
+              var reader = new FileReader();
+              reader.onload = function (evt) {
+                document.getElementById("preview-photo").innerHTML =
+                  '<img src="' +
+                  evt.target.result +
+                  '" alt="Student photo" style="width:100%;height:100%;object-fit:cover;">';
+              };
+              reader.readAsDataURL(file);
+            });
+          document
+            .getElementById("idcard-form")
+            .addEventListener("submit", function (e) {
+              e.preventDefault();
+              alert(
+                "This is a front-end preview only. Connect this form to your backend to actually save the ID card.",
+              );
+            });
+        }
+        document.addEventListener("DOMContentLoaded", bindPreview);
+      </script>
+    </div>
+  </main>
+</TeacherLayout>

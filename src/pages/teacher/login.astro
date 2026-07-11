@@ -1,0 +1,89 @@
+---
+import TeacherLayout from "../../layouts/TeacherLayout.astro";
+---
+
+<TeacherLayout
+  title="Teacher Login | Saraswati Shiksha Niketan Inter College"
+  teacherName=""
+  isLoggedIn={false}
+>
+
+<main class="portal-main">
+
+  <div class="container">
+
+    <div class="portal-narrow">
+
+      <div class="portal-card">
+
+        <h1>Teacher Login</h1>
+
+        <p class="sub">
+          For teaching staff to update student results and ID cards.
+        </p>
+
+        <form
+          method="post"
+          action="/teacher/dashboard"
+          novalidate
+        >
+
+          <div class="portal-field">
+
+            <label for="employee_id">
+              Employee ID
+            </label>
+
+            <input
+              type="text"
+              id="employee_id"
+              name="employee_id"
+              required
+              autofocus
+            />
+
+          </div>
+
+          <div class="portal-field">
+
+            <label for="password">
+              Password
+            </label>
+
+            <input
+              type="password"
+              id="password"
+              name="password"
+              required
+            />
+
+          </div>
+
+          <button
+            class="btn btn-primary btn-block"
+            type="submit"
+          >
+            Log In
+          </button>
+
+        </form>
+
+        <div class="portal-link-row">
+
+          Not a staff account?
+
+          <a href="/student/login">
+            Student Login Here
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</main>
+
+</TeacherLayout>
