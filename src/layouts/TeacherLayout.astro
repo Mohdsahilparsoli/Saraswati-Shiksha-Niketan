@@ -5,18 +5,31 @@ import "../styles/t-portal.css";
 import Header from "../components/teacher/Header.astro";
 import Footer from "../components/teacher/Footer.astro";
 
-const { title } = Astro.props;
+interface Props {
+  title: string;
+  teacherName?: string;
+  isLoggedIn?: boolean;
+}
+
+const {
+  title,
+  teacherName = "",
+  isLoggedIn = false,
+} = Astro.props;
 ---
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Cpath d=%27M32 3 8 12v16c0 16 10.5 26.5 24 33 13.5-6.5 24-17 24-33V12L32 3Z%27 fill=%27%231E3A8A%27/%3E%3C/svg%3E">
+
   </head>
 
   <body>
-    <Header />
+    <Header teacherName={teacherName} isLoggedIn={isLoggedIn} />
 
     <main>
       <slot />
