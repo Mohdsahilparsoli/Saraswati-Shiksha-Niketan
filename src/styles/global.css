@@ -1510,6 +1510,18 @@ nav.mobile-nav{
 }
 
 /* -------------------------- Responsive -------------------------- */
+
+@media(max-width:1600px){
+  .nav-cta a.btn.btn-dark.btn-block{
+   padding: 10px;
+  }
+  .nav-links{
+    gap: 12px;
+  }
+  .nav-cta{
+    gap: 10px;
+  }
+}
 @media (max-width: 1080px) {
   .grid-4 {
     grid-template-columns: repeat(2, 1fr);
